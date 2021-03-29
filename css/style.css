@@ -3,6 +3,7 @@
     --pink-color: #F1E4E6;
     --dark-pink-color: #F16D7F;
     --gray-color: #F8F8F8;
+    --gray-light-color: #E8E8E8;
 }
 
 body {
@@ -148,4 +149,18 @@ body {
 .product__description {
     background: var(--gray-color);
     padding: 25px 29px 20px 17px;
+}
+
+.header__link-opacity:hover,
+.header__link-opacity:focus {
+    opacity: 0.7;
+}
+
+.header__button-icon {
+    fill: var(--gray-light-color);
+}
+
+.header__button:hover .header__button-icon,
+.header__link:hover .header__button-icon {
+    fill: var(--dark-pink-color);
 }
