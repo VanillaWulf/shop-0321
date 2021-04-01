@@ -1,0 +1,26 @@
+
+.products {
+
+    &__button {
+        display: none;
+    }
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    
+    &__item {
+        width: 360px;
+    }
+    
+    &__img {
+        display: block;
+    }
+    
+    &__description {
+        background: $gray-color;
+        padding: 25px 29px 20px 17px;
+    }
+}
