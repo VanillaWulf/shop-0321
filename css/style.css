@@ -60,7 +60,7 @@ body {
 }
 
 .container {
-  width: 1140px;
+  width: 71%;
   margin: 0 auto;
 }
 
@@ -75,8 +75,15 @@ body {
   clip: rect(0 0 0 0);
 }
 
+@media (max-width: 1600px) {
+  .container {
+    width: 96%;
+  }
+}
+
 .header {
   background-color: #222222;
+  position: relative;
 }
 
 .header__navigation {
@@ -100,12 +107,21 @@ body {
   margin: 0 33px 0 0;
 }
 
+.header__button:hover + .header__navigation {
+  display: block;
+}
+
 .header__button:hover .header__button-icon {
   fill: #F16D7F;
 }
 
 .header__button:active .header__button-icon {
   fill: #F1E4E6;
+}
+
+.header__navigation {
+  background-color: #FFF;
+  position: absolute;
 }
 
 .header__link {
@@ -128,14 +144,37 @@ body {
   fill: #E8E8E8;
 }
 
-.brand {
-  max-width: 1600px;
-  margin: 0 auto;
-  display: flex;
-  margin: 0 0 63px;
+@media (max-width: 1600px) {
+  .header {
+    padding: 0 16px;
+  }
 }
 
-.brand__title-container {
+@media (max-width: 768px) {
+  .header {
+    padding: 0 16px;
+  }
+  .header__link {
+    display: none;
+  }
+  .header__link-opacity {
+    display: none;
+  }
+}
+
+.brand {
+  max-width: 1600px;
+  display: flex;
+  margin: 0 auto 63px auto;
+}
+
+@media (max-width: 768px) {
+  .brand {
+    min-height: 363px;
+  }
+}
+
+.brand .brand__title-container {
   background: #F1E4E6;
   flex-grow: 1;
   padding: 0 0 0 92px;
@@ -143,7 +182,19 @@ body {
   align-items: center;
 }
 
-.brand__title {
+@media (max-width: 1600px) {
+  .brand .brand__title-container {
+    padding: 0 0 0 69px;
+  }
+}
+
+@media (max-width: 768px) {
+  .brand .brand__title-container {
+    padding: 0 0 0 83px;
+  }
+}
+
+.brand .brand__title {
   font-size: 48px;
   font-weight: 900;
   line-height: 58px;
@@ -151,15 +202,58 @@ body {
   text-transform: uppercase;
 }
 
-.brand__sub-title {
+@media (max-width: 1600px) {
+  .brand .brand__title {
+    font-size: 44px;
+    line-height: 52px;
+    font-weight: normal;
+  }
+}
+
+@media (max-width: 768px) {
+  .brand .brand__title {
+    font-size: 38px;
+    line-height: 46px;
+    font-weight: normal;
+  }
+}
+
+.brand .brand__sub-title {
   font-size: 32px;
   font-weight: 700;
   line-height: 38px;
   display: block;
 }
 
-.brand__pink-sub-title {
+@media (max-width: 1600px) {
+  .brand .brand__sub-title {
+    font-size: 24px;
+    line-height: 29px;
+    font-weight: normal;
+  }
+}
+
+@media (max-width: 768px) {
+  .brand .brand__sub-title {
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: normal;
+  }
+}
+
+.brand .brand__pink-sub-title {
   color: #F16D7F;
+}
+
+.brand .brand__img {
+  width: 50%;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .brand .brand__img {
+    display: none;
+  }
 }
 
 .promotions__list {
@@ -177,12 +271,28 @@ body {
 }
 
 .promotions__item {
-  width: 360px;
+  width: 31%;
   min-height: 260px;
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 0 0 30px;
+}
+
+@media (max-width: 1600px) {
+  .promotions__item {
+    width: 31%;
+    min-height: 168px;
+    margin: 0 0 19px;
+  }
+}
+
+@media (max-width: 768px) {
+  .promotions__item {
+    width: 100%;
+    min-height: 247px;
+    margin: 0 0 32px;
+  }
 }
 
 .promotions__item--woman {
@@ -199,6 +309,12 @@ body {
   width: 100%;
 }
 
+@media (max-width: 1600px) {
+  .promotions__item--accesories {
+    min-height: 116px;
+  }
+}
+
 .products__button {
   display: none;
 }
@@ -209,16 +325,53 @@ body {
   flex-wrap: wrap;
 }
 
+@media (max-width: 768px) {
+  .products__list {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
 .products__item {
   width: 360px;
+}
+
+@media (max-width: 375px) {
+  .products__item {
+    width: 100%;
+  }
 }
 
 .products__img {
   display: block;
 }
 
+@media (max-width: 375px) {
+  .products__img {
+    width: 100%;
+  }
+}
+
 .products__description {
   background: #F8F8F8;
   padding: 25px 29px 20px 17px;
+}
+
+.footer {
+  background-color: #222222;
+}
+
+.footer__link {
+  width: 10px;
+  height: 10px;
+  background-color: white;
+}
+
+.footer__link:hover {
+  background-color: #F1E4E6;
+}
+
+.footer__link:hover .footer__link-icon {
+  fill: #F16D7F;
 }
 /*# sourceMappingURL=style.css.map */
