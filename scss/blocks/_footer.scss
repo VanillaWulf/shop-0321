@@ -1,7 +1,17 @@
 .footer {
+    background-color: $black-color;
+
     &__link {
         width: 10px;
         height: 10px;
         background-color: white;
+
+        &:hover {
+            background-color: $pink-color;
+        }
+
+        &:hover .footer__link-icon {
+            fill: $dark-pink-color;
+        }
     }
 }
