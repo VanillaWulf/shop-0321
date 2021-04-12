@@ -1,3 +1,17 @@
+@font-face {
+  font-family: 'Lato';
+  src: url("../fonts/lato-bold.woff") format("woff"), url("../fonts/lato-bold.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url("../fonts/lato-regular.woff") format("woff"), url("../fonts/lato-regular.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+}
+
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -52,7 +66,7 @@ table {
 }
 
 body {
-  font-family: Lato;
+  font-family: 'Lato', 'Arial', sans-serif;
   font-size: 14px;
   font-style: normal;
   font-weight: 300;
